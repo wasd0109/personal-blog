@@ -8,7 +8,7 @@ function NavBar({ siteTitle }) {
   return (
     <BootstrapNavBar bg="bg-white" expand="lg" className={styles.nav}>
       <BootstrapNavBar.Brand className={styles.title} href="#home">
-        {siteTitle.toUpperCase()}
+        <Link to="/">{siteTitle.toUpperCase()}</Link>
       </BootstrapNavBar.Brand>
       <BootstrapNavBar.Toggle
         aria-controls="basic-navbar-nav"

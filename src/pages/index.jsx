@@ -7,12 +7,13 @@ import Seo from "../components/seo"
 import BlogCard from "../components/BlogCard"
 import * as styles from "./index.module.css"
 import { NavItem } from "react-bootstrap"
+import ProfileCard from "../components/ProfileCard"
 
 const IndexPage = ({ data }) => {
   const blogPosts = data.allMdx.edges
   return (
-    <Layout>
-      <Seo title="Ken's Blog" />
+    <Layout showProfile={true}>
+      <Seo title="Home" />
       <div>
         {blogPosts.map(({ node: blogPost }) => (
           <BlogCard
