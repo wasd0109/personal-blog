@@ -15,7 +15,7 @@ function BlogTemplate({ data }) {
   } = data.mdx
   const thumb = getImage(thumbnail)
   return (
-    <Layout>
+    <Layout showProfile={true}>
       <Seo title={`Blog|${title}`} description={excerpt} />
       <Container fluid>
         <Card className={styles.card}>
