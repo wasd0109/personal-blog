@@ -39,4 +39,5 @@ collections:
       - { name: thumbnail, label: Thumbnail, widget: image }
       - { name: stack, label: Stack }
       - { name: linkToRepo, label: Link to repo }
+      - { name: linkToDeploy, label: Link to deploy }
       - { name: date, label: Date, widget: datetime }
