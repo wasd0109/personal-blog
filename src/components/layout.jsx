@@ -19,7 +19,6 @@ const Layout = ({ children, showProfile }) => {
       }
     }
   `).site.siteMetadata
-  console.log(siteTitle)
   return (
     <>
       <Navbar siteTitle={siteTitle} />
