@@ -9,12 +9,7 @@ function ProfileCard() {
     query ProfileInfo {
       file(relativePath: { eq: "me.png" }) {
         childImageSharp {
-          gatsbyImageData(
-            width: 300
-            placeholder: TRACED_SVG
-            formats: PNG
-            quality: 100
-          )
+          gatsbyImageData
         }
       }
     }
@@ -22,8 +17,8 @@ function ProfileCard() {
   const profileImage = getImage(data.file)
 
   return (
-    <Container style={{ display: "flex", justifyContent: "center" }}>
-      <Card style={{ width: "18rem" }} className={styles.card}>
+    <Container fluid>
+      <Card className={styles.card}>
         <div className={styles.image}>
           <GatsbyImage image={profileImage} />
         </div>

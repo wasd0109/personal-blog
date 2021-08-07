@@ -4,13 +4,16 @@ import { Navbar as BootstrapNavBar, Container, Nav } from "react-bootstrap"
 
 import * as styles from "./Navbar.module.css"
 
-function NavBar() {
+function NavBar({ siteTitle }) {
   return (
     <BootstrapNavBar bg="bg-white" expand="lg" className={styles.nav}>
       <BootstrapNavBar.Brand className={styles.title} href="#home">
-        KEN'S BLOG
+        {siteTitle.toUpperCase()}
       </BootstrapNavBar.Brand>
-      <BootstrapNavBar.Toggle aria-controls="basic-navbar-nav" />
+      <BootstrapNavBar.Toggle
+        aria-controls="basic-navbar-nav"
+        className={styles.hamburger}
+      />
       <BootstrapNavBar.Collapse
         className="justify-content-end"
         id="basic-navbar-nav"
