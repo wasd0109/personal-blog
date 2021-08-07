@@ -1,0 +1,13 @@
+.nav {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.link {
+  text-decoration: none;
+  color: #2196f3;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.links {
+}
