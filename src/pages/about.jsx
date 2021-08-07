@@ -4,12 +4,15 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Card, Container } from "react-bootstrap"
 import { graphql } from "gatsby"
 
+import Seo from "../components/seo"
+
 import * as styles from "./about.module.css"
 
 function AboutPage({ data }) {
   const profileImage = getImage(data.file)
   return (
     <Layout showProfile={false}>
+      <Seo title={`About`} description="About the author" />
       <Container fluid>
         <Card className={styles.card}>
           <div className={styles.image}>

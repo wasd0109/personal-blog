@@ -2,11 +2,13 @@ import { graphql } from "gatsby"
 import React from "react"
 import Layout from "../components/layout"
 import ProjectCard from "../components/ProjectCard"
+import Seo from "../components/seo"
 
 function ProjectsPage({ data }) {
   const projects = data.allMdx.edges
   return (
     <Layout>
+      <Seo title={`Projects`} description="Projects Page" />
       {projects.map(({ node: project }) => (
         <ProjectCard
           key={project.id}

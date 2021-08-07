@@ -16,7 +16,7 @@ function BlogTemplate({ data }) {
   const thumb = getImage(thumbnail)
   return (
     <Layout showProfile={true}>
-      <Seo title={`Blog|${title}`} description={excerpt} />
+      <Seo title={`Blog | ${title}`} description={excerpt} />
       <Container fluid>
         <Card className={styles.card}>
           <Card.Body>
