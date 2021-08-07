@@ -24,7 +24,7 @@ function BlogCard({ slug, title, excerpt, date, thumbnail, hashtags }) {
                 <p key={hashtag}>{hashtag}</p>
               ))}
             </div>
-            <Link to={slug}>Read more</Link>
+            <Link to={`blogs/${slug}`}>Read more</Link>
           </div>
         </Card.Body>
       </Card>

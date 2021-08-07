@@ -9,7 +9,7 @@ import Navbar from "./Navbar"
 import ProfileCard from "./ProfileCard"
 import BlogCard from "./BlogCard"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, showProfile }) => {
   const { title: siteTitle } = useStaticQuery(graphql`
     {
       site {
@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
     <>
       <Navbar siteTitle={siteTitle} />
       <div className="main">
-        <ProfileCard />
+        {showProfile ? <ProfileCard /> : null}
         <div className="content">{children}</div>
       </div>
       <footer>Copyright Ken Cheung 2021</footer>
