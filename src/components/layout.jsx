@@ -7,7 +7,6 @@ import "./layout.css"
 
 import Navbar from "./Navbar"
 import ProfileCard from "./ProfileCard"
-import BlogCard from "./BlogCard"
 
 const Layout = ({ children, showProfile }) => {
   const { title: siteTitle } = useStaticQuery(graphql`

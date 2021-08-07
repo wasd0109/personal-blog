@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import { Container, Card } from "react-bootstrap"
 import Moment from "react-moment"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -24,8 +24,10 @@ function BlogTemplate({ data }) {
             <p>
               <Moment date={date} format="YYYY/MM/DD HH:MM" />
             </p>
-            <GatsbyImage image={thumb} />
-            <MDXRenderer>{body}</MDXRenderer>
+            <Container>
+              <GatsbyImage image={thumb} alt="blog thumbnail" />
+              <MDXRenderer>{body}</MDXRenderer>
+            </Container>
           </Card.Body>
         </Card>
       </Container>

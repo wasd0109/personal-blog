@@ -11,7 +11,6 @@ function ProjectsPage({ data }) {
         <ProjectCard
           key={project.id}
           thumbnail={project.frontmatter.thumbnail}
-          description={project.frontmatter.thumbail}
           description={project.frontmatter.description}
           linkToDeploy={project.frontmatter.linkToDeploy}
           linkToRepo={project.frontmatter.linkToRepo}

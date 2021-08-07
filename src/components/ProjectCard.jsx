@@ -1,6 +1,6 @@
 import React from "react"
 import * as styles from "./ProjectCard.module.css"
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Card, Container } from "react-bootstrap"
 
 function ProjectCard({
@@ -42,7 +42,7 @@ function ProjectCard({
           </div>
           <Card.Text className={styles.description}>{description}</Card.Text>
           <div className={styles.bottomRow}>
-            <a href={linkToRepo} target="_blank">
+            <a href={linkToRepo} target="_blank" rel="noreferrer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -53,7 +53,7 @@ function ProjectCard({
               </svg>
               Github
             </a>
-            <a href={linkToDeploy} target="_blank">
+            <a href={linkToDeploy} target="_blank" rel="noreferrer">
               {deployLogo}
               {deploymentLocation}
             </a>

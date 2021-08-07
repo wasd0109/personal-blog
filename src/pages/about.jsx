@@ -1,8 +1,8 @@
 import React from "react"
 import Layout from "../components/layout"
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Card, Container } from "react-bootstrap"
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import * as styles from "./about.module.css"
 
@@ -13,7 +13,7 @@ function AboutPage({ data }) {
       <Container fluid>
         <Card className={styles.card}>
           <div className={styles.image}>
-            <GatsbyImage image={profileImage} />
+            <GatsbyImage image={profileImage} alt="blog thumbnail" />
           </div>
           <Card.Body className={styles.cardBody}>
             <Card.Title className={styles.name}>Ken Cheung</Card.Title>
@@ -38,7 +38,11 @@ function AboutPage({ data }) {
               </p>
             </div>
             <div className={styles.logos}>
-              <a href="https://github.com/wasd0109" target="_blank">
+              <a
+                href="https://github.com/wasd0109"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -49,7 +53,11 @@ function AboutPage({ data }) {
                 </svg>
                 wasd0109
               </a>
-              <a href="https://twitter.com/wasd0109_dev" target="_blank">
+              <a
+                href="https://twitter.com/wasd0109_dev"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -60,7 +68,11 @@ function AboutPage({ data }) {
                 </svg>
                 wasd0109_dev
               </a>
-              <a href="mailto:wasd0109.dev@gmail.com" target="_blank">
+              <a
+                href="mailto:wasd0109.dev@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -71,7 +83,11 @@ function AboutPage({ data }) {
                 </svg>
                 wasd0109.dev@gmail.com
               </a>
-              <a href="https://www.linkedin.com/in/wasd0109/" target="_blank">
+              <a
+                href="https://www.linkedin.com/in/wasd0109/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"

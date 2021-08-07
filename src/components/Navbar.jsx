@@ -1,6 +1,6 @@
-import React, { useState } from "react"
+import React from "react"
 import { Link } from "gatsby"
-import { Navbar as BootstrapNavBar, Container, Nav } from "react-bootstrap"
+import { Navbar as BootstrapNavBar, Nav } from "react-bootstrap"
 
 import * as styles from "./Navbar.module.css"
 

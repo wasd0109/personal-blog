@@ -10,3 +10,12 @@
   padding: 1rem;
   padding-bottom: 0.5rem;
 }
+
+/* Targeting image in markdown */
+p > img {
+  max-width: 80vw;
+}
+
+h1 > kbd {
+  font-size: medium;
+}
