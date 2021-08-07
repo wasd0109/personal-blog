@@ -1,12 +1,12 @@
 import * as React from "react"
 
 import "./destyle.css"
-import "./layout.css"
-
 import "bootstrap/dist/css/bootstrap.min.css"
+import "./layout.css"
 
 import Navbar from "./Navbar"
 import ProfileCard from "./ProfileCard"
+import BlogCard from "./BlogCard"
 
 const Layout = ({ children }) => {
   return (
@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
       <Navbar />
       <div className="main">
         <ProfileCard />
-        <div className="content"></div>
+        <div className="content">{children}</div>
       </div>
     </>
   )

@@ -20,13 +20,14 @@ function ProfileCard() {
     }
   `)
   const profileImage = getImage(data.file)
+
   return (
     <Container>
       <Card style={{ width: "18rem" }} className={styles.card}>
         <div className={styles.image}>
           <GatsbyImage image={profileImage} />
         </div>
-        <Card.Body>
+        <Card.Body className={styles.cardBody}>
           <Card.Title className={styles.name}>Ken Cheung</Card.Title>
 
           <Card.Text className={styles.text}>

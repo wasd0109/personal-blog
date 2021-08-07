@@ -1,11 +1,12 @@
 import React from "react"
 import { Card, Container } from "react-bootstrap"
 
+import * as styles from "./BlogCard.module.css"
+
 function BlogCard() {
   return (
     <Container>
-      <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
+      <Card style={{ width: "18rem" }} className={styles.card}>
         <Card.Body>
           <Card.Title>Card Title</Card.Title>
           <Card.Text>
