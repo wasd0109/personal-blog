@@ -16,16 +16,14 @@ function NavBar() {
         id="basic-navbar-nav"
       >
         <Nav fill="true" as="ul">
-          <Nav.Item as="li">
-            <Link className={styles.link}>HOME</Link>
+          <Nav.Item className={styles.link} as="li">
+            <Link to="/">HOME</Link>
           </Nav.Item>
-          <Nav.Item as="li">
-            <Link className={styles.link}>ABOUT</Link>
+          <Nav.Item className={styles.link} as="li">
+            <Link to="/about">ABOUT</Link>
           </Nav.Item>
-          <Nav.Item as="li">
-            <Link className={styles.link} to="/projects">
-              PROJECTS
-            </Link>
+          <Nav.Item className={styles.link} as="li">
+            <Link to="/projects">PROJECTS</Link>
           </Nav.Item>
         </Nav>
       </BootstrapNavBar.Collapse>

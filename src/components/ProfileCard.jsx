@@ -22,7 +22,7 @@ function ProfileCard() {
   const profileImage = getImage(data.file)
 
   return (
-    <Container>
+    <Container style={{ display: "flex", justifyContent: "center" }}>
       <Card style={{ width: "18rem" }} className={styles.card}>
         <div className={styles.image}>
           <GatsbyImage image={profileImage} />
