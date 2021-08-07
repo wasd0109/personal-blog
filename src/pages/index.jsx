@@ -32,7 +32,10 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   query BlogPosts {
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { fileAbsolutePath: { regex: "/(blogs)/" } }
+    ) {
       edges {
         node {
           id

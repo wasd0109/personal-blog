@@ -26,7 +26,6 @@ const Layout = ({ children, showProfile }) => {
         {showProfile ? <ProfileCard /> : null}
         <div className="content">{children}</div>
       </div>
-      <footer>Copyright Ken Cheung 2021</footer>
     </>
   )
 }

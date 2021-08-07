@@ -11,7 +11,7 @@ function BlogCard({ slug, title, excerpt, date, thumbnail, hashtags }) {
   return (
     <Container fluid>
       <Card className={styles.card}>
-        <GatsbyImage image={thumb} />
+        <GatsbyImage image={thumb} alt="article thumbnail" />
         <Card.Body className={styles.cardBody}>
           <Card.Title className={styles.title}>{title}</Card.Title>
           <Card.Text className={styles.date}>
