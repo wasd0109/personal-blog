@@ -2,10 +2,9 @@
 title: 脱マウス！キーボードでVS Codeを使いこなせ！（ショートカット編）
 excerpt: キーボードだけでVS Codeをうまく使いこなそう！
 hashtags: "#VSCode #VisualStudioCode"
+thumbnail: https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/1825969/acc342ca-f2bb-4e00-7761-96011adf4f23.png
 date: 2021-08-07T06:18:42.005Z
 ---
-
-![opengraph-home.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/1825969/acc342ca-f2bb-4e00-7761-96011adf4f23.png)
 
 ## イントロ
 どうもはじめまして。生物専攻でありながらウェブ開発やってる男です。（外人）
