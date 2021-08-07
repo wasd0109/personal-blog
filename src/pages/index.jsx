@@ -12,7 +12,7 @@ const IndexPage = ({ data }) => {
   const blogPosts = data.allMdx.edges
   return (
     <Layout>
-      <Seo title="Home" />
+      <Seo title="Ken's Blog" />
       <div>
         {blogPosts.map(({ node: blogPost }) => (
           <BlogCard
