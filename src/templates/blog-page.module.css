@@ -6,6 +6,10 @@
   margin: 1rem 0;
 }
 
+.thumbnail {
+  margin-bottom: 0.5rem;
+}
+
 .cardBody {
   padding: 1rem;
   padding-bottom: 0.5rem;
