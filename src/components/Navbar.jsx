@@ -5,9 +5,6 @@ import { Navbar as BootstrapNavBar, Container, Nav } from "react-bootstrap"
 import * as styles from "./Navbar.module.css"
 
 function NavBar() {
-  const { innerWidth } = window
-  const [navShown, setNavShown] = useState(innerWidth > 480 ? true : false)
-  console.log(innerWidth)
   return (
     <BootstrapNavBar bg="bg-white" expand="lg" className={styles.nav}>
       <BootstrapNavBar.Brand className={styles.title} href="#home">
