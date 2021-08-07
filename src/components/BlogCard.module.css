@@ -1,8 +1,53 @@
 .card {
-  justify-content: center;
-  align-items: center;
   display: flex;
-  text-align: center;
+  text-align: left;
+  justify-content: flex-start;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   margin: 1rem 0;
+  flex-grow: 1;
+}
+
+.cardBody {
+  padding: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.4em;
+  margin-bottom: 0.5em;
+}
+
+.date {
+  color: #666666;
+  font-size: 0.8em;
+  margin-bottom: 0.5em;
+}
+
+.excerpt {
+  color: #666666;
+  margin-top: 0em;
+  margin-bottom: 0.5em;
+}
+
+.bottomRow {
+  display: flex;
+  align-items: center;
+}
+
+.hashtags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hashtags > p {
+  font-size: small;
+  margin-bottom: 0em;
+  margin-right: 0.5rem;
+  text-align: center;
+}
+.bottomRow > a {
+  text-align: center;
+  margin-left: auto;
 }
