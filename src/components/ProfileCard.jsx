@@ -1,7 +1,7 @@
 import React from "react"
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
-import { useStaticQuery, graphql } from "gatsby"
 import { Card, Container } from "react-bootstrap"
+import { useStaticQuery, graphql } from "gatsby"
 import * as styles from "./ProfileCard.module.css"
 
 function ProfileCard() {

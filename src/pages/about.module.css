@@ -1,0 +1,69 @@
+.card {
+  margin-top: 1rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  text-align: center;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.name {
+  font-weight: bold;
+  font-size: x-large;
+  margin: 0 0.5rem;
+}
+
+.text {
+  padding: 0 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.cardBody {
+  padding: 0 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.image {
+  margin-top: 0.5rem;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.hashtags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.hashtag {
+  border-radius: 30px;
+  border-width: 1px;
+  text-align: center;
+  padding: 0.1rem 0.5rem;
+  margin: 0.2rem 0.1rem;
+}
+
+.logos {
+  display: flex;
+
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.logos > a > svg {
+  margin-right: 0.5rem;
+}
+
+.logos > a {
+  padding-bottom: 0.3rem;
+}
+
+.aboutContent {
+  padding: 1rem 0.5rem;
+}
+
+.aboutContent > p {
+  margin-bottom: 0.2rem;
+}
