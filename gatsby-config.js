@@ -5,6 +5,36 @@ module.exports = {
     author: `Ken Cheung`,
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-firebase",
+      options: {
+        features: {
+          auth: false,
+          database: false,
+          firestore: false,
+          storage: false,
+          messaging: false,
+          functions: false,
+          performance: false,
+          analytics: true,
+        },
+        credentials: {
+          apiKey: "AIzaSyA8Nv1n-y_I4twumwIMNEi1wVb7kebt2y4",
+
+          authDomain: "personal-blog-7bf0b.firebaseapp.com",
+
+          projectId: "personal-blog-7bf0b",
+
+          storageBucket: "personal-blog-7bf0b.appspot.com",
+
+          messagingSenderId: "214552775085",
+
+          appId: "1:214552775085:web:83d0866cc55f8af9dab924",
+
+          measurementId: "G-HC9V7THJZL",
+        },
+      },
+    },
     "gatsby-plugin-image",
     {
       resolve: `gatsby-source-filesystem`,

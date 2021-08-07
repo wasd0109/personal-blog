@@ -1,14 +1,18 @@
 import React from "react"
-import Layout from "../components/layout"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Card, Container } from "react-bootstrap"
 import { graphql } from "gatsby"
+import { useFirebase } from "gatsby-plugin-firebase"
 
 import Seo from "../components/seo"
+import Layout from "../components/layout"
 
 import * as styles from "./about.module.css"
 
 function AboutPage({ data }) {
+  useFirebase(firebase => {
+    firebase.analytics().logEvent("visited_about_page")
+  }, [])
   const profileImage = getImage(data.file)
   return (
     <Layout showProfile={false}>

@@ -1,11 +1,14 @@
 import * as React from "react"
 import { graphql, Link } from "gatsby"
-
+import { useFirebase } from "gatsby-plugin-firebase"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import BlogCard from "../components/BlogCard"
 
 const IndexPage = ({ data }) => {
+  useFirebase(firebase => {
+    firebase.analytics().logEvent("visited_home_page")
+  }, [])
   const blogPosts = data.allMdx.edges
   return (
     <Layout showProfile={true}>
