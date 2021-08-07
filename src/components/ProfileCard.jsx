@@ -18,7 +18,6 @@ function ProfileCard() {
 
   return (
     <Container fluid>
-      {" "}
       <Card className={styles.card}>
         <div className={styles.image}>
           <GatsbyImage image={profileImage} />

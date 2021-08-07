@@ -10,7 +10,6 @@ import { NavItem } from "react-bootstrap"
 
 const IndexPage = ({ data }) => {
   const blogPosts = data.allMdx.edges
-  console.log(blogPosts)
   return (
     <Layout>
       <Seo title="Home" />
