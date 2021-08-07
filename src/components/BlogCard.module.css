@@ -1,0 +1,8 @@
+.card {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  margin: 1rem 0;
+}
