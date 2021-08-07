@@ -1,13 +1,21 @@
 .nav {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  max-width: 100%;
 }
 
 .link {
-  text-decoration: none;
-  color: #2196f3;
   margin-left: 1rem;
   margin-right: 1rem;
+  margin: 0.5rem;
 }
 
-.links {
+.link > a {
+  text-decoration: none;
+  color: #2196f3;
+}
+
+.title {
+  padding-left: 1rem;
+  font-weight: bold;
+  font-size: x-large;
 }

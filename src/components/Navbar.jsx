@@ -5,38 +5,28 @@ import { Navbar as BootstrapNavBar, Container, Nav } from "react-bootstrap"
 import * as styles from "./Navbar.module.css"
 
 function NavBar() {
-  const { innerWidth } = window
-  const [navShown, setNavShown] = useState(innerWidth > 480 ? true : false)
-  console.log(innerWidth)
   return (
-    <BootstrapNavBar
-      bg="bg-white"
-      expand="lg"
-      fixed="top"
-      className={styles.nav}
-    >
-      <Container>
-        <BootstrapNavBar.Brand href="#home">KEN'S BLOG</BootstrapNavBar.Brand>
-        <BootstrapNavBar.Toggle aria-controls="basic-navbar-nav" />
-        <BootstrapNavBar.Collapse
-          className="justify-content-end"
-          id="basic-navbar-nav"
-        >
-          <Nav fill="true" as="ul">
-            <Nav.Item as="li">
-              <Link className={styles.link}>HOME</Link>
-            </Nav.Item>
-            <Nav.Item as="li">
-              <Link className={styles.link}>ABOUT</Link>
-            </Nav.Item>
-            <Nav.Item as="li">
-              <Link className={styles.link} to="/projects">
-                PROJECTS
-              </Link>
-            </Nav.Item>
-          </Nav>
-        </BootstrapNavBar.Collapse>
-      </Container>
+    <BootstrapNavBar bg="bg-white" expand="lg" className={styles.nav}>
+      <BootstrapNavBar.Brand className={styles.title} href="#home">
+        KEN'S BLOG
+      </BootstrapNavBar.Brand>
+      <BootstrapNavBar.Toggle aria-controls="basic-navbar-nav" />
+      <BootstrapNavBar.Collapse
+        className="justify-content-end"
+        id="basic-navbar-nav"
+      >
+        <Nav fill="true" as="ul">
+          <Nav.Item className={styles.link} as="li">
+            <Link to="/">HOME</Link>
+          </Nav.Item>
+          <Nav.Item className={styles.link} as="li">
+            <Link to="/about">ABOUT</Link>
+          </Nav.Item>
+          <Nav.Item className={styles.link} as="li">
+            <Link to="/projects">PROJECTS</Link>
+          </Nav.Item>
+        </Nav>
+      </BootstrapNavBar.Collapse>
     </BootstrapNavBar>
   )
 }
