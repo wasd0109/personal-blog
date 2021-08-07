@@ -10,7 +10,10 @@ function NavBar() {
       <BootstrapNavBar.Brand className={styles.title} href="#home">
         KEN'S BLOG
       </BootstrapNavBar.Brand>
-      <BootstrapNavBar.Toggle aria-controls="basic-navbar-nav" />
+      <BootstrapNavBar.Toggle
+        aria-controls="basic-navbar-nav"
+        className={styles.hamburger}
+      />
       <BootstrapNavBar.Collapse
         className="justify-content-end"
         id="basic-navbar-nav"

@@ -16,6 +16,7 @@ const Layout = ({ children }) => {
         <ProfileCard />
         <div className="content">{children}</div>
       </div>
+      <footer>Copyright Ken Cheung 2021</footer>
     </>
   )
 }
