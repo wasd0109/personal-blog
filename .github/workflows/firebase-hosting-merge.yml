@@ -6,11 +6,18 @@ name: Deploy to Firebase Hosting on merge
   push:
     branches:
       - main
+
+env:
+  YARN_CACHE_FOLDER: .cache/yarn
+
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: ${YARN_CACHE_FOLDER}
+          key: ${{ runner.os }}-yarn-cache-v1
       - run: yarn install --frozen-lockfile
       - run: yarn build
       - uses: FirebaseExtended/action-hosting-deploy@v0
