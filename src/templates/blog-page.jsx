@@ -4,7 +4,7 @@ import { Container, Card } from "react-bootstrap"
 import Moment from "react-moment"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
-import analytics from "../utils/fbInit"
+import useFirebaseAnalytics from "../utils/fbAnalytics"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -16,7 +16,7 @@ function BlogTemplate({ data }) {
     frontmatter: { title, excerpt, date, thumbnail, hashtags },
   } = data.mdx
 
-  analytics.logEvent(`visited_${title.replace(" ", "_")}_blog`)
+  useFirebaseAnalytics(`visited_${title.replace(" ", "_")}_blog`)
 
   const thumb = getImage(thumbnail)
   return (

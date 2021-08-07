@@ -2,7 +2,7 @@ import React from "react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Card, Container } from "react-bootstrap"
 import { graphql } from "gatsby"
-import analytics from "../utils/fbInit"
+import useFirebaseAnalytics from "../utils/fbAnalytics"
 
 import Seo from "../components/seo"
 import Layout from "../components/layout"
@@ -10,7 +10,7 @@ import Layout from "../components/layout"
 import * as styles from "./about.module.css"
 
 function AboutPage({ data }) {
-  analytics.logEvent("visited_about_page")
+  useFirebaseAnalytics("visited_projects_page")
 
   const profileImage = getImage(data.file)
   return (

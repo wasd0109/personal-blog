@@ -1,13 +1,13 @@
 import { graphql } from "gatsby"
 import React from "react"
-import analytics from "../utils/fbInit"
+import useFirebaseAnalytics from "../utils/fbAnalytics"
 
 import Layout from "../components/layout"
 import ProjectCard from "../components/ProjectCard"
 import Seo from "../components/seo"
 
 function ProjectsPage({ data }) {
-  analytics.logEvent("visited_projects_page")
+  useFirebaseAnalytics("visited_projects_page")
 
   const projects = data.allMdx.edges
   return (
