@@ -66,11 +66,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
   const blogs = blogsList.data.allMdx.edges
-  const blogsPerPage = 1
+  const blogsPerPage = 10
   const numPages = Math.ceil(blogs.length / blogsPerPage)
   Array.from({ length: numPages }).forEach((_, i) => {
     createPage({
-      path: i === 0 ? `/` : `/page/${i + 1}`,
+      path: i === 0 ? `/` : `/pages/${i + 1}`,
       component: path.resolve("./src/templates/index.jsx"),
       context: {
         limit: blogsPerPage,

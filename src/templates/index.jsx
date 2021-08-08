@@ -4,10 +4,11 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import BlogCard from "../components/BlogCard"
 import useFirebaseAnalytics from "../utils/fbAnalytics"
+import Pagination from "../components/Pagination"
 
 const IndexPage = ({ data, pageContext }) => {
-  console.log(pageContext)
   useFirebaseAnalytics("visited_home_page")
+  console.log(pageContext)
   const blogPosts = data.allMdx.edges
   return (
     <Layout showProfile={true}>
@@ -25,6 +26,10 @@ const IndexPage = ({ data, pageContext }) => {
           />
         ))}
       </div>
+      <Pagination
+        numPages={pageContext.numPages}
+        currentPages={pageContext.currentPage}
+      />
     </Layout>
   )
 }
