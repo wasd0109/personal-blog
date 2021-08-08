@@ -15,15 +15,17 @@ const IndexPage = ({ data, pageContext }) => {
       <Seo title="Home" />
       <div>
         {blogPosts.map(({ node: blogPost }) => (
-          <BlogCard
-            key={blogPost.id}
-            slug={blogPost.slug}
-            title={blogPost.frontmatter.title}
-            excerpt={blogPost.frontmatter.excerpt}
-            date={blogPost.frontmatter.data}
-            thumbnail={blogPost.frontmatter.thumbnail}
-            hashtags={blogPost.frontmatter.hashtags.split(" ")}
-          />
+          <Link to={`/blogs/${blogPost.slug}`}>
+            <BlogCard
+              key={blogPost.id}
+              slug={blogPost.slug}
+              title={blogPost.frontmatter.title}
+              excerpt={blogPost.frontmatter.excerpt}
+              date={blogPost.frontmatter.data}
+              thumbnail={blogPost.frontmatter.thumbnail}
+              hashtags={blogPost.frontmatter.hashtags.split(" ")}
+            />
+          </Link>
         ))}
       </div>
       <Pagination

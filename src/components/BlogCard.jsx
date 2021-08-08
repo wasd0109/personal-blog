@@ -25,7 +25,7 @@ function BlogCard({ slug, title, excerpt, date, thumbnail, hashtags }) {
           <div className={styles.bottomRow}>
             <div className={styles.hashtags}>
               {hashtags.map(hashtag => (
-                <p key={hashtag}>{hashtag}</p>
+                <p key={hashtag}>#{hashtag}</p>
               ))}
             </div>
             <Link to={`blogs/${slug}`}>Read more</Link>
