@@ -1,0 +1,20 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 0 0.5rem;
+}
+
+.pagination > a {
+  text-decoration: none;
+  color: #2196f3;
+}
+
+.pagination > p {
+  text-align: center;
+}
+
+.disabled {
+  pointer-events: none;
+  color: #666666 !important;
+}
