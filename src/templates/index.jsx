@@ -1,5 +1,6 @@
 import * as React from "react"
 import { graphql, Link } from "gatsby"
+
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import BlogCard from "../components/BlogCard"
@@ -36,7 +37,7 @@ const IndexPage = ({ data, pageContext }) => {
 }
 
 export const query = graphql`
-  query BlogPosts($skip: Int!, $limit: Int!) {
+  query BlogPosts($skip: Int!, $limit: Int!, $language: String!) {
     allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { fileAbsolutePath: { regex: "/(blogs)/" } }
@@ -58,6 +59,15 @@ export const query = graphql`
               }
             }
           }
+        }
+      }
+    }
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
         }
       }
     }

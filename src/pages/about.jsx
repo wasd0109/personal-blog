@@ -13,11 +13,10 @@ import * as styles from "./about.module.css"
 function AboutPage({ data }) {
   useFirebaseAnalytics("visited_projects_page")
   const { t } = useTranslation()
-  console.log()
   const profileImage = getImage(data.file)
   return (
     <Layout showProfile={false}>
-      <Seo title={`About`} description="About the author" />
+      <Seo title={t("PageName")} description="About the author" />
 
       <Container fluid>
         <Card className={styles.card}>
