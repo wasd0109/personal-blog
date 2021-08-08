@@ -1,10 +1,10 @@
 ---
-name: Personal webpage
-description: A personal blog created with Gatsby
+name: 個人サイト
+description: Gatsbyで作られた個人サイト
 thumbnail: ../assets/screen-shot-2021-08-08-at-18.47.11.png
 stack: Gatsby React Firebase
-language: en
+language: jp
 linkToRepo: https://github.com/wasd0109/personal-blog
 linkToDeploy: https://wasd0109ken.engineer/
-date: 2021-08-08T10:02:01.458Z
+date: 2021-08-08T14:03:56.838Z
 ---
