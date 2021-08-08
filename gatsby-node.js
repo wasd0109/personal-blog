@@ -5,7 +5,6 @@
  */
 
 // You can delete this file if you're not using it
-const { create } = require("domain")
 const path = require("path")
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
@@ -32,6 +31,52 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       component: blogTemplate,
       context: {
         slug: node.slug,
+      },
+    })
+  })
+
+  const blogsList = await graphql(`
+    query BlogPosts {
+      allMdx(
+        sort: { fields: [frontmatter___date], order: DESC }
+        filter: { fileAbsolutePath: { regex: "/(blogs)/" } }
+      ) {
+        edges {
+          node {
+            id
+            slug
+            frontmatter {
+              title
+              excerpt
+              date
+              hashtags
+              thumbnail {
+                childImageSharp {
+                  gatsbyImageData
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+  if (blogsList.errors) {
+    reporter.panicOnBuild("Error while running blog list GraphQL query.")
+    return
+  }
+  const blogs = blogsList.data.allMdx.edges
+  const blogsPerPage = 1
+  const numPages = Math.ceil(blogs.length / blogsPerPage)
+  Array.from({ length: numPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/` : `/page/${i + 1}`,
+      component: path.resolve("./src/templates/index.jsx"),
+      context: {
+        limit: blogsPerPage,
+        skip: i * blogsPerPage,
+        numPages,
+        currentPage: i + 1,
       },
     })
   })

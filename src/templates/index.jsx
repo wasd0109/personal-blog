@@ -5,7 +5,8 @@ import Seo from "../components/seo"
 import BlogCard from "../components/BlogCard"
 import useFirebaseAnalytics from "../utils/fbAnalytics"
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data, pageContext }) => {
+  console.log(pageContext)
   useFirebaseAnalytics("visited_home_page")
   const blogPosts = data.allMdx.edges
   return (
@@ -29,10 +30,12 @@ const IndexPage = ({ data }) => {
 }
 
 export const query = graphql`
-  query BlogPosts {
+  query BlogPosts($skip: Int!, $limit: Int!) {
     allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { fileAbsolutePath: { regex: "/(blogs)/" } }
+      limit: $limit
+      skip: $skip
     ) {
       edges {
         node {
