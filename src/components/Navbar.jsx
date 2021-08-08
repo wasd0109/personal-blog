@@ -15,7 +15,7 @@ function NavBar({ siteTitle }) {
         className={styles.hamburger}
       />
       <BootstrapNavBar.Collapse
-        className="justify-content-end"
+        className={styles.navLinks}
         id="basic-navbar-nav"
       >
         <Nav fill="true" as="ul">

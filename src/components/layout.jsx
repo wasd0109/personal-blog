@@ -23,11 +23,14 @@ const Layout = ({ children, showProfile }) => {
   return (
     <>
       <Navbar siteTitle={siteTitle} />
-      <div className="main">
-        {showProfile ? <ProfileCard /> : null}
-
+      {showProfile ? (
+        <div className="main">
+          <ProfileCard />
+          <div className="content">{children}</div>
+        </div>
+      ) : (
         <div className="content">{children}</div>
-      </div>
+      )}
     </>
   )
 }

@@ -50,3 +50,7 @@
   padding-top: 0.5rem;
   justify-content: space-around;
 }
+
+.logos > a:hover {
+  opacity: 0.6;
+}

@@ -8,7 +8,6 @@ import Pagination from "../components/Pagination"
 
 const IndexPage = ({ data, pageContext }) => {
   useFirebaseAnalytics("visited_home_page")
-  console.log(pageContext)
   const blogPosts = data.allMdx.edges
   return (
     <Layout showProfile={true}>

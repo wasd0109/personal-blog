@@ -24,3 +24,9 @@ p > img {
 h1 > kbd {
   font-size: medium;
 }
+
+@media (min-width: 961px) {
+  .cardBody {
+    width: 70vw;
+  }
+}

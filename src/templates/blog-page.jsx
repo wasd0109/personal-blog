@@ -21,9 +21,9 @@ function BlogTemplate({ data }) {
   return (
     <Layout showProfile={true}>
       <Seo title={`Blog | ${title}`} description={excerpt} />
-      <Container fluid>
+      <Container fluid className={styles.container}>
         <Card className={styles.card}>
-          <Card.Body>
+          <Card.Body className={styles.cardBody}>
             <h1>{title}</h1>
             <p>
               <Moment date={date} format="YYYY/MM/DD HH:MM" />
