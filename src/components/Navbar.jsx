@@ -1,10 +1,12 @@
 import React from "react"
-import { Link } from "gatsby"
-import { Navbar as BootstrapNavBar, Nav } from "react-bootstrap"
-
+import { Link, useI18next } from "gatsby-plugin-react-i18next"
+import { Navbar as BootstrapNavBar, Nav, Dropdown } from "react-bootstrap"
 import * as styles from "./Navbar.module.css"
+import { ImEarth } from "react-icons/im"
 
 function NavBar({ siteTitle }) {
+  const { languages, originalPath, t, i18n } = useI18next()
+  const languageChange = i18n.language === "en" ? "jp" : "en"
   return (
     <BootstrapNavBar bg="bg-white" expand="lg" className={styles.nav}>
       <BootstrapNavBar.Brand className={styles.title} href="#home">
@@ -28,6 +30,11 @@ function NavBar({ siteTitle }) {
           <Nav.Item className={styles.link} as="li">
             <Link to="/projects">PROJECTS</Link>
           </Nav.Item>
+          <Nav.Item className={styles.link} as="li">
+            <Link to={originalPath} language={languageChange}>
+              {languageChange.toUpperCase()}
+            </Link>
+          </Nav.Item>
         </Nav>
       </BootstrapNavBar.Collapse>
     </BootstrapNavBar>
@@ -35,3 +42,12 @@ function NavBar({ siteTitle }) {
 }
 
 export default NavBar
+
+{
+  /* 
+          {languages.map(language => (
+            <Dropdown.Item className={styles.link} as="li">
+             
+            </Dropdown.Item>
+          ))} */
+}
