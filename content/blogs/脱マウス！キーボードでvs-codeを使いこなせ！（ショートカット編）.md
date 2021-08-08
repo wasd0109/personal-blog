@@ -3,6 +3,7 @@ title: 脱マウス！キーボードでVS Codeを使いこなせ！（ショー
 excerpt: キーボードだけでVS Codeをうまく使いこなそう！
 hashtags: VSCode VisualStudioCode
 thumbnail: ../assets/acc342ca-f2bb-4e00-7761-96011adf4f23.png
+language: jp
 date: 2021-08-07T06:18:42.005Z
 ---
 ## イントロ
