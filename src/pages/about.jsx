@@ -16,6 +16,7 @@ function AboutPage({ data }) {
   return (
     <Layout showProfile={false}>
       <Seo title={`About`} description="About the author" />
+
       <Container fluid>
         <Card className={styles.card}>
           <div className={styles.image}>
