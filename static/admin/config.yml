@@ -33,7 +33,6 @@ collections:
     # allow user to create new projects
     create: true
     # fields for each projects
-    slug:
     fields:
       - { name: name, label: Name }
       - { name: description, label: description }
