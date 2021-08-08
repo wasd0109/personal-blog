@@ -1,8 +1,8 @@
 ---
 title: GatsbyでFirebase Analyticsを使うとビルドでエラる問題
 excerpt: GatsbyでFirebase Analyticsを導入したら思わぬエラーが現れました
-hashtags: "gatsby React Firebase"
-thumbnail: ../assets/Screen Shot 2021-08-08 at 0.25.58.png
+hashtags: gatsby React Firebase
+thumbnail: ../assets/screen-shot-2021-08-08-at-0.25.58.png
 date: 2021-08-08T06:49:31.310Z
 ---
 
@@ -15,6 +15,7 @@ date: 2021-08-08T06:49:31.310Z
 ネットで解決方法を探して、下のように Webpack 設定を変更してみてもなかなかうまくいきませんでした。
 
 ```js
+// gatsby-node.js
 exports.onCreateWebpackConfig = ({ stage, actions, getConfig }) => {
   if (stage === "build-html") {
     actions.setWebpackConfig({
@@ -42,6 +43,7 @@ exports.onCreateWebpackConfig = ({ stage, actions, getConfig }) => {
 それで Analytics に関連する関数を使う前に一回ブラウザー環境チェックして、ブラウザ環境であることを確認してから Analytics を使えば問題解決となります。
 
 ```js
+// index.js
 const isBrowser = typeof window !== "undefined"
 if (isBrowser) {
   firebase.analytics().logEvent("visited_home_page")
@@ -51,6 +53,7 @@ if (isBrowser) {
 これで解決になりますが、使うことに環境チェックするのはちょっとめんどくさいので、useFirebaseAnalytics という別のユーティリティ関数として抽出しました。（カスタムフックではないのに名前を use 何ちゃらにしてしまいすみません）
 
 ```js
+// fbAnalytics.js
 import firebase from "gatsby-plugin-firebase"
 
 // Build throw error if it's ran on node
