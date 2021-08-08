@@ -54,7 +54,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
   })
 
-  const blogsPerPage = 1
+  const blogsPerPage = 10
 
   const blogsList = await graphql(`
     query BlogPosts {
