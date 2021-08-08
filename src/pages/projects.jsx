@@ -37,7 +37,7 @@ function ProjectsPage({ data }) {
 export default ProjectsPage
 
 export const query = graphql`
-  query Projcets {
+  query Projcets($language: String!) {
     allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { fileAbsolutePath: { regex: "/(projects)/" } }
@@ -57,6 +57,15 @@ export const query = graphql`
             name
             stack
           }
+        }
+      }
+    }
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
         }
       }
     }

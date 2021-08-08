@@ -2,9 +2,12 @@ import React from "react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Card, Container } from "react-bootstrap"
 import { useStaticQuery, graphql } from "gatsby"
+import { useTranslation } from "gatsby-plugin-react-i18next"
+
 import * as styles from "./ProfileCard.module.css"
 
 function ProfileCard() {
+  const { t } = useTranslation()
   const data = useStaticQuery(graphql`
     query ProfileInfo {
       file(relativePath: { eq: "me.png" }) {
@@ -25,9 +28,7 @@ function ProfileCard() {
         <Card.Body className={styles.cardBody}>
           <Card.Title className={styles.name}>Ken Cheung</Card.Title>
 
-          <Card.Text className={styles.text}>
-            A biologist wondering in the programming world
-          </Card.Text>
+          <Card.Text className={styles.text}>{t("SelfDescription")}</Card.Text>
           <div className={styles.hashtags}>
             <p className={styles.hashtag}>#React</p>
             <p className={styles.hashtag}>#Node</p>
