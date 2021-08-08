@@ -17,7 +17,6 @@ function BlogTemplate({ data }) {
   } = data.mdx
 
   useFirebaseAnalytics(`visited_${title.replace(" ", "_")}_blog`)
-
   const thumb = getImage(thumbnail)
   return (
     <Layout showProfile={true}>
