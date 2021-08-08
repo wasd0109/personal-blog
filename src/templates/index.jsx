@@ -1,13 +1,16 @@
 import * as React from "react"
+import { useEffect } from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import BlogCard from "../components/BlogCard"
 import useFirebaseAnalytics from "../utils/fbAnalytics"
 import Pagination from "../components/Pagination"
+import { navigate } from "gatsby-link"
 
 const IndexPage = ({ data, pageContext }) => {
   useFirebaseAnalytics("visited_home_page")
+
   const blogPosts = data.allMdx.edges
   return (
     <Layout showProfile={true}>
