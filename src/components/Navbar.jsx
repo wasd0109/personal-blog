@@ -3,6 +3,7 @@ import { Link, useI18next } from "gatsby-plugin-react-i18next"
 import { Navbar as BootstrapNavBar, Nav, Dropdown } from "react-bootstrap"
 import * as styles from "./Navbar.module.css"
 import { ImEarth } from "react-icons/im"
+import { graphql, useStaticQuery } from "gatsby"
 
 function NavBar({ siteTitle }) {
   const { languages, originalPath, t, i18n } = useI18next()
@@ -22,16 +23,21 @@ function NavBar({ siteTitle }) {
       >
         <Nav fill="true" as="ul">
           <Nav.Item className={styles.link} as="li">
-            <Link to="/">HOME</Link>
+            <Link to="/">{t("HomeButton")}</Link>
           </Nav.Item>
           <Nav.Item className={styles.link} as="li">
-            <Link to="/about">ABOUT</Link>
+            <Link to="/about">{t("AboutButton")}</Link>
           </Nav.Item>
           <Nav.Item className={styles.link} as="li">
-            <Link to="/projects">PROJECTS</Link>
+            <Link to="/projects">{t("ProjectsButton")}</Link>
           </Nav.Item>
           <Nav.Item className={styles.link} as="li">
-            <Link to={originalPath} language={languageChange}>
+            <Link
+              className={styles.languageLink}
+              to={originalPath}
+              language={languageChange}
+            >
+              <ImEarth />
               {languageChange.toUpperCase()}
             </Link>
           </Nav.Item>
@@ -42,12 +48,3 @@ function NavBar({ siteTitle }) {
 }
 
 export default NavBar
-
-{
-  /* 
-          {languages.map(language => (
-            <Dropdown.Item className={styles.link} as="li">
-             
-            </Dropdown.Item>
-          ))} */
-}
