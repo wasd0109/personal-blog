@@ -10,6 +10,10 @@
   color: #2196f3;
 }
 
+.pagination > p {
+  text-align: center;
+}
+
 .disabled {
   pointer-events: none;
   color: #666666 !important;
