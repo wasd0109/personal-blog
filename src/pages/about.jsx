@@ -3,6 +3,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Card, Container } from "react-bootstrap"
 import { graphql } from "gatsby"
 import useFirebaseAnalytics from "../utils/fbAnalytics"
+import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next"
 
 import Seo from "../components/seo"
 import Layout from "../components/layout"
@@ -11,7 +12,8 @@ import * as styles from "./about.module.css"
 
 function AboutPage({ data }) {
   useFirebaseAnalytics("visited_projects_page")
-
+  const { t } = useTranslation()
+  console.log()
   const profileImage = getImage(data.file)
   return (
     <Layout showProfile={false}>
@@ -26,7 +28,7 @@ function AboutPage({ data }) {
             <Card.Title className={styles.name}>Ken Cheung</Card.Title>
 
             <Card.Text className={styles.text}>
-              A biologist wondering in the programming world
+              {t("SelfDescription")}
             </Card.Text>
             <div className={styles.hashtags}>
               <p className={styles.hashtag}>#React</p>
@@ -35,14 +37,8 @@ function AboutPage({ data }) {
               <p className={styles.hashtag}>#FF14</p>
             </div>
             <div className={styles.aboutContent}>
-              <p>
-                Hi! I am Ken, a Biology Master Student from Tokyo Institute of
-                Technology.
-              </p>
-              <p>
-                I will be graduating on October, 2022 so if you think this blog
-                is nice, feel free to contact me for any offer!
-              </p>
+              <p>{t("SelfInfo.Sentence1")}</p>
+              <p>{t("SelfInfo.Sentence2")}</p>
             </div>
             <div className={styles.logos}>
               <a
@@ -116,10 +112,19 @@ function AboutPage({ data }) {
 export default AboutPage
 
 export const query = graphql`
-  query AboutInfo {
+  query AboutInfo($language: String!) {
     file(relativePath: { eq: "me.png" }) {
       childImageSharp {
         gatsbyImageData
+      }
+    }
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
       }
     }
   }
