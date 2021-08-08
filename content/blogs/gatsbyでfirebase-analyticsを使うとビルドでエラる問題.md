@@ -2,7 +2,7 @@
 title: GatsbyでFirebase Analyticsを使うとビルドでエラる問題
 excerpt: GatsbyでFirebase Analyticsを導入したら思わぬエラーが現れました
 hashtags: "gatsby React Firebase "
-thumbnail: https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/1825969/369702ea-66ec-5062-3d20-c859fe774645.png
+thumbnail: ../assets/screen-shot-2021-08-08-at-0.25.58.png
 date: 2021-08-08T06:49:31.310Z
 ---
 # トラブル
