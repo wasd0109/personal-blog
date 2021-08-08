@@ -9,6 +9,7 @@
 .cardBody {
   padding: 1rem;
   padding-bottom: 0.5rem;
+  min-height: 10em;
 }
 
 .title {

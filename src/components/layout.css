@@ -15,3 +15,7 @@ footer {
   font-size: smaller;
   background: #eee;
 }
+
+.grvsc-container {
+  width: 80vw;
+}

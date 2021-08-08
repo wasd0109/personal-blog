@@ -28,14 +28,12 @@ function BlogTemplate({ data }) {
             <p>
               <Moment date={date} format="YYYY/MM/DD HH:MM" />
             </p>
-            <Container>
-              <GatsbyImage
-                image={thumb}
-                alt="blog thumbnail"
-                className={styles.thumbnail}
-              />
-              <MDXRenderer>{body}</MDXRenderer>
-            </Container>
+            <GatsbyImage
+              image={thumb}
+              alt="blog thumbnail"
+              className={styles.thumbnail}
+            />
+            <MDXRenderer>{body}</MDXRenderer>
           </Card.Body>
         </Card>
       </Container>
