@@ -6,6 +6,11 @@
   margin: 1rem 0;
 }
 
+.card:hover {
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
 .cardBody {
   padding: 1rem;
   padding-bottom: 0.5rem;
@@ -50,4 +55,5 @@
 .bottomRow > a {
   text-align: center;
   margin-left: auto;
+  color: #2196f3;
 }
