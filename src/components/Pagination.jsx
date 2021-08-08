@@ -6,11 +6,11 @@ import { useTranslation } from "gatsby-plugin-react-i18next"
 
 function Pagination({ numPages, currentPages }) {
   const { t } = useTranslation()
-  const previous = currentPages < 2 ? `/pages/${currentPages - 1}` : "/"
+  const previous = currentPages !== 2 ? `/pages/${currentPages - 1}` : "/"
   const next = `/pages/${currentPages + 1}`
   const previousDisabled = currentPages === 1 ? true : false
   const nextDisabled = currentPages === numPages ? true : false
-  // if (numPages === 1) return null
+  if (numPages === 1) return null
   return (
     <Container fluid>
       <div className={styles.pagination}>

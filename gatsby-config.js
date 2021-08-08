@@ -114,7 +114,7 @@ module.exports = {
       options: {
         localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
         languages: [`en`, `jp`],
-        defaultLanguage: `en`,
+        defaultLanguage: `jp`,
         // if you are using Helmet, you must include siteUrl, and make sure you add http:https
         siteUrl: `https://example.com/`,
         // you can pass any i18next options
@@ -130,11 +130,6 @@ module.exports = {
           {
             matchPath: "/:lang?/blog/:uid",
             getLanguageFromPath: true,
-            excludeLanguages: ["es"],
-          },
-          {
-            matchPath: "/preview",
-            languages: ["en"],
           },
         ],
       },

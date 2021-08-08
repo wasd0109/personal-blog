@@ -37,10 +37,13 @@ function ProjectsPage({ data }) {
 export default ProjectsPage
 
 export const query = graphql`
-  query Projcets($language: String!) {
+  query Projects($language: String!) {
     allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fileAbsolutePath: { regex: "/(projects)/" } }
+      filter: {
+        frontmatter: { language: { eq: $language } }
+        fileAbsolutePath: { regex: "/(projects)/" }
+      }
     ) {
       edges {
         node {

@@ -1,7 +1,7 @@
 ---
 name: 個人サイト
 description: Gatsbyで作られた個人サイト
-thumbnail: ../assets/screen-shot-2021-08-08-at-18.47.11.png
+thumbnail: ../assets/screen-shot-2021-08-08.png
 stack: Gatsby React Firebase
 language: jp
 linkToRepo: https://github.com/wasd0109/personal-blog
