@@ -38,6 +38,7 @@ collections:
       - { name: description, label: description }
       - { name: thumbnail, label: Thumbnail, widget: image }
       - { name: stack, label: Stack }
+      - { name: language, label: language }
       - { name: linkToRepo, label: Link to repo }
       - { name: linkToDeploy, label: Link to deploy }
       - { name: date, label: Date, widget: datetime }
