@@ -8,6 +8,8 @@ function Pagination({ numPages, currentPages }) {
   const next = `/pages/${currentPages + 1}`
   const previousDisabled = currentPages === 1 ? true : false
   const nextDisabled = currentPages === numPages ? true : false
+  if (numPages === 1) return null
+
   return (
     <Container fluid>
       <div className={styles.pagination}>

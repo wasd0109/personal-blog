@@ -28,11 +28,12 @@ collections:
 
   - name: projects
     label: Projects
-    # folder to store news articles at
+    # folder to store projects at
     folder: content/projects
-    # allow user to create new articles
+    # allow user to create new projects
     create: true
-    # fields for each news article
+    # fields for each projects
+    slug:
     fields:
       - { name: name, label: Name }
       - { name: description, label: description }
