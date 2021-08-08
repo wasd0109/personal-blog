@@ -30,6 +30,9 @@ footer {
     justify-items: center;
   }
   .content {
-    grid-column: 2 / -1;
+    grid-column: 2/ -1;
+  }
+  .grvsc-container {
+    width: 60vw;
   }
 }

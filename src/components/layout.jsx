@@ -26,7 +26,7 @@ const Layout = ({ children, showProfile }) => {
       {showProfile ? (
         <div className="main">
           <ProfileCard />
-          <div className="content">{children}</div>{" "}
+          <div className="content">{children}</div>
         </div>
       ) : (
         <div className="content">{children}</div>
