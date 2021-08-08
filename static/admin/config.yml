@@ -10,16 +10,34 @@ media_folder: content/assets
 public_folder: ../assets # (src for uploaded images will start 'assets/')
 # initialize our collections
 collections:
-  # mine collection called 'News'
+  # mine collection called 'Blogs'
   - name: blogs
     label: Blogs
-    # folder to store news articles at
+    # folder to store blogs articles at
     folder: content/blogs
+    # allow user to create new blog
+    create: true
+    # fields for each blog
+    fields:
+      - { name: title, label: Title }
+      - { name: excerpt, label: Excerpt }
+      - { name: hashtags, label: Hashtags }
+      - { name: thumbnail, label: Thumbnail, widget: image }
+      - { name: body, label: Body, widget: markdown }
+      - { name: date, label: Date, widget: datetime }
+
+  - name: projects
+    label: Projects
+    # folder to store news articles at
+    folder: content/projects
     # allow user to create new articles
     create: true
     # fields for each news article
     fields:
-      - { name: title, label: Title }
-      - { name: excerpt, label: Excerpt }
-      - { name: body, label: Body, widget: markdown }
+      - { name: name, label: Name }
+      - { name: description, label: description }
+      - { name: thumbnail, label: Thumbnail, widget: image }
+      - { name: stack, label: Stack }
+      - { name: linkToRepo, label: Link to repo }
+      - { name: linkToDeploy, label: Link to deploy }
       - { name: date, label: Date, widget: datetime }

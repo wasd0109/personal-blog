@@ -1,0 +1,25 @@
+.card {
+  display: flex;
+  text-align: left;
+  justify-content: flex-start;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  margin: 1rem 0;
+}
+
+.thumbnail {
+  margin-bottom: 0.5rem;
+}
+
+.cardBody {
+  padding: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Targeting image in markdown */
+p > img {
+  max-width: 80vw;
+}
+
+h1 > kbd {
+  font-size: medium;
+}

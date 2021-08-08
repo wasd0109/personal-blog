@@ -1,0 +1,65 @@
+.card {
+  display: flex;
+  text-align: left;
+  justify-content: flex-start;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  margin: 1rem 0;
+}
+
+.cardBody {
+  padding: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1.4em;
+  margin-bottom: 0.3em;
+}
+
+.description {
+  color: #666666;
+  margin-top: 0em;
+  margin-bottom: 0.5em;
+}
+
+.stacks {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  flex-wrap: wrap;
+}
+
+.stacks > p {
+  font-size: small;
+  margin-bottom: 0.5em;
+  margin-right: 0.5rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: medium;
+}
+
+.bottomRow {
+  display: flex;
+  justify-content: space-around;
+}
+
+.bottomRow > a {
+  display: flex;
+  align-items: center;
+  padding: 0.2rem 0.5rem;
+  border-width: 0.1rem;
+  border-radius: 1rem;
+}
+
+.bottomRow > a > svg {
+  margin-right: 0.4rem;
+  width: 24px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  flex-wrap: wrap;
+}
