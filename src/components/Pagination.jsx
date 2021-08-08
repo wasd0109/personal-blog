@@ -14,11 +14,6 @@ function Pagination({ numPages, currentPages }) {
         <Link className={previousDisabled ? styles.disabled : ""} to={previous}>
           Previous
         </Link>
-        <div>
-          <p>
-            Page {currentPages} of {numPages}
-          </p>
-        </div>
         <Link className={nextDisabled ? styles.disabled : ""} to={next}>
           Next
         </Link>
