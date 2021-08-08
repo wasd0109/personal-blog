@@ -9,6 +9,7 @@
 .cardBody {
   padding: 1rem;
   padding-bottom: 0.5rem;
+  min-height: 10em;
 }
 
 .title {
@@ -49,4 +50,8 @@
 .bottomRow > a {
   text-align: center;
   margin-left: auto;
+}
+
+.image {
+  height: 30em;
 }
