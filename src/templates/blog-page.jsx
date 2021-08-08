@@ -28,7 +28,6 @@ function BlogTemplate({ data }) {
             <p>
               <Moment date={date} format="YYYY/MM/DD HH:MM" />
             </p>
-
             <GatsbyImage
               image={thumb}
               alt="blog thumbnail"
