@@ -39,7 +39,10 @@ export const query = graphql`
   query BlogPosts($skip: Int!, $limit: Int!, $language: String!) {
     allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fileAbsolutePath: { regex: "/(blogs)/" } }
+      filter: {
+        fileAbsolutePath: { regex: "/(blogs)/" }
+        frontmatter: { language: { eq: $language } }
+      }
       limit: $limit
       skip: $skip
     ) {

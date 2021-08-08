@@ -16,7 +16,7 @@ function BlogTemplate({ data }) {
     body,
     frontmatter: { title, excerpt, date, thumbnail, hashtags },
   } = data.mdx
-
+  console.log(data.mdx)
   useFirebaseAnalytics(`visited_${title.replace(" ", "_")}_blog`)
   const thumb = getImage(thumbnail)
   const { t, i18n } = useI18next()
