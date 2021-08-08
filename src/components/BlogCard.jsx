@@ -1,6 +1,7 @@
 import React from "react"
 import { Card, Container } from "react-bootstrap"
-import { Link } from "gatsby"
+
+import { Link, useI18next } from "gatsby-plugin-react-i18next"
 import Moment from "react-moment"
 
 import * as styles from "./BlogCard.module.css"
@@ -8,6 +9,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 function BlogCard({ slug, title, excerpt, date, thumbnail, hashtags }) {
   const thumb = getImage(thumbnail)
+  const { i18n, t } = useI18next()
   return (
     <Container fluid>
       <Card className={styles.card}>
@@ -19,7 +21,8 @@ function BlogCard({ slug, title, excerpt, date, thumbnail, hashtags }) {
         <Card.Body className={styles.cardBody}>
           <Card.Title className={styles.title}>{title}</Card.Title>
           <Card.Text className={styles.date}>
-            Posted at: <Moment date={date} format="YYYY/MM/DD" />
+            {t("PostTime")}:{" "}
+            <Moment date={date} format="L" locale={i18n.language} />
           </Card.Text>
           <Card.Text className={styles.excerpt}>{excerpt}</Card.Text>
           <div className={styles.bottomRow}>
@@ -28,7 +31,7 @@ function BlogCard({ slug, title, excerpt, date, thumbnail, hashtags }) {
                 <p key={hashtag}>#{hashtag}</p>
               ))}
             </div>
-            <Link to={`blogs/${slug}`}>Read more</Link>
+            <Link to={`blogs/${slug}`}>{t("ReadMore")}</Link>
           </div>
         </Card.Body>
       </Card>
