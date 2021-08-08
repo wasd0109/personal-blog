@@ -9,6 +9,8 @@
 .cardBody {
   padding: 1rem;
   padding-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .name {
@@ -41,6 +43,7 @@
 
 .bottomRow {
   display: flex;
+  margin-top: auto;
   justify-content: space-around;
 }
 
@@ -62,4 +65,10 @@
   align-items: center;
   align-self: flex-start;
   flex-wrap: wrap;
+}
+
+@media (min-width: 961px) {
+  .card {
+    width: 30vw;
+  }
 }
