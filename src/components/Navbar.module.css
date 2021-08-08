@@ -12,8 +12,6 @@ a:hover {
 }
 
 .link {
-  margin-left: 1rem;
-  margin-right: 1rem;
   margin: 0.5rem;
 }
 .hamburger {
@@ -25,8 +23,24 @@ a:hover {
   color: #2196f3;
 }
 
+.link > a:hover {
+  opacity: 60%;
+}
+
 .title {
   margin-left: 1rem;
   font-weight: bold;
   font-size: x-large;
+}
+
+@media (min-width: 961px) {
+  .navLinks {
+    margin-right: 4em;
+    justify-content: flex-end;
+    font-size: large;
+  }
+  .link {
+    margin: 0.5rem;
+    margin-left: 3rem;
+  }
 }

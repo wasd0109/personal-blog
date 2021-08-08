@@ -57,3 +57,13 @@
   margin-left: auto;
   color: #2196f3;
 }
+
+.bottomRow > a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 961px) {
+  .card {
+    width: 100%;
+  }
+}

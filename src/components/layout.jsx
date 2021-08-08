@@ -25,7 +25,6 @@ const Layout = ({ children, showProfile }) => {
       <Navbar siteTitle={siteTitle} />
       <div className="main">
         {showProfile ? <ProfileCard /> : null}
-
         <div className="content">{children}</div>
       </div>
     </>
