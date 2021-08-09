@@ -54,3 +54,8 @@
 .logos > a:hover {
   opacity: 0.6;
 }
+
+.logos > a > svg {
+  width: 1.5rem;
+  height: auto;
+}
