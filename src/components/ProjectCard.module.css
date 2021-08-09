@@ -57,7 +57,8 @@
 
 .bottomRow > a > svg {
   margin-right: 0.4rem;
-  width: 24px;
+  width: 1.5rem;
+  height: auto;
 }
 
 @media (min-width: 961px) {

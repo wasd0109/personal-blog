@@ -70,6 +70,11 @@
   margin-bottom: 0.2rem;
 }
 
+.logos > a > svg {
+  width: 1.5rem;
+  height: auto;
+}
+
 @media (min-width: 961px) {
   .content {
     display: flex;
@@ -114,6 +119,11 @@
   .logos {
     align-items: flex-start;
   }
+
+  .logos > a {
+    display: flex;
+  }
+
   .logos > a:hover {
     opacity: 60%;
   }
