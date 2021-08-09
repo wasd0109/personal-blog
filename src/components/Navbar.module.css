@@ -13,6 +13,8 @@ a:hover {
 
 .link {
   margin: 0.5rem;
+  display: flex;
+  justify-content: center;
 }
 .hamburger {
   margin-right: 1rem;
@@ -21,6 +23,7 @@ a:hover {
 .link > a {
   text-decoration: none;
   color: #2196f3;
+  flex-grow: 1;
 }
 
 .link > a:hover {
@@ -53,5 +56,11 @@ a:hover {
   .link {
     margin: 0.5rem;
     margin-left: 3rem;
+  }
+
+  .link > a {
+    text-decoration: none;
+    color: #2196f3;
+    flex-grow: 0;
   }
 }
