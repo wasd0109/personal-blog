@@ -9,7 +9,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 function BlogCard({ slug, title, excerpt, date, thumbnail, hashtags }) {
   const thumb = getImage(thumbnail)
-  const { i18n, t } = useI18next()
+  const { i18n, t } = useI18next("blogcard")
   return (
     <Container fluid>
       <Card className={styles.card}>

@@ -5,7 +5,7 @@ import { Container } from "react-bootstrap"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
 function Pagination({ numPages, currentPages }) {
-  const { t } = useTranslation()
+  const { t } = useTranslation("pagination")
   const previous = currentPages !== 2 ? `/pages/${currentPages - 1}` : "/"
   const next = `/pages/${currentPages + 1}`
   const previousDisabled = currentPages === 1 ? true : false

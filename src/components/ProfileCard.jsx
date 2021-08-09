@@ -7,7 +7,7 @@ import { useTranslation } from "gatsby-plugin-react-i18next"
 import * as styles from "./ProfileCard.module.css"
 
 function ProfileCard() {
-  const { t } = useTranslation()
+  const { t } = useTranslation("profile")
   const data = useStaticQuery(graphql`
     query ProfileInfo {
       file(relativePath: { eq: "me.png" }) {

@@ -12,7 +12,7 @@ import * as styles from "./about.module.css"
 
 function AboutPage({ data }) {
   useFirebaseAnalytics("visited_projects_page")
-  const { t } = useTranslation()
+  const { t } = useTranslation("about")
   const profileImage = getImage(data.file)
   return (
     <Layout showProfile={false}>

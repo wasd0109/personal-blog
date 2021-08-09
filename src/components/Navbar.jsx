@@ -6,7 +6,7 @@ import { ImEarth } from "react-icons/im"
 import { graphql, useStaticQuery } from "gatsby"
 
 function NavBar({ siteTitle }) {
-  const { languages, originalPath, t, i18n } = useI18next()
+  const { languages, originalPath, t, i18n } = useI18next("navbar")
   const languageChange = i18n.language === "en" ? "jp" : "en"
   return (
     <BootstrapNavBar bg="bg-white" expand="lg" className={styles.nav}>
