@@ -6,15 +6,15 @@ import Seo from "../components/seo"
 import BlogCard from "../components/BlogCard"
 import useFirebaseAnalytics from "../utils/fbAnalytics"
 import Pagination from "../components/Pagination"
-import { navigate } from "gatsby-link"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 const IndexPage = ({ data, pageContext }) => {
   useFirebaseAnalytics("visited_home_page")
-
+  const { t } = useTranslation("home")
   const blogPosts = data.allMdx.edges
   return (
     <Layout showProfile={true}>
-      <Seo title="Home" />
+      <Seo title={t("PageName")} />
       <div>
         {blogPosts.map(({ node: blogPost }) => (
           <Link to={`/blogs/${blogPost.slug}`}>

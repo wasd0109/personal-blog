@@ -19,10 +19,10 @@ function BlogTemplate({ data }) {
   console.log(data.mdx)
   useFirebaseAnalytics(`visited_${title.replace(" ", "_")}_blog`)
   const thumb = getImage(thumbnail)
-  const { t, i18n } = useI18next()
+  const { t, i18n } = useI18next(["blog-page", "blogcard"])
   return (
     <Layout showProfile={true}>
-      <Seo title={`Blog | ${title}`} description={excerpt} />
+      <Seo title={`${t("PageName")} | ${title}`} description={excerpt} />
       <Container fluid className={styles.container}>
         <Card className={styles.card}>
           <Card.Body className={styles.cardBody}>

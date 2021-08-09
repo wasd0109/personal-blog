@@ -1,7 +1,7 @@
 import { graphql } from "gatsby"
 import React from "react"
 import useFirebaseAnalytics from "../utils/fbAnalytics"
-
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import Layout from "../components/layout"
 import ProjectCard from "../components/ProjectCard"
 import Seo from "../components/seo"
@@ -12,11 +12,11 @@ import * as styles from "./projects.module.css"
 
 function ProjectsPage({ data }) {
   useFirebaseAnalytics("visited_projects_page")
-
+  const { t } = useTranslation("projects")
   const projects = data.allMdx.edges
   return (
     <Layout>
-      <Seo title={`Projects`} description="Projects Page" />
+      <Seo title={t("PageName")} description="Projects Page" />
       <Container fluid className={styles.container}>
         {projects.map(({ node: project }) => (
           <ProjectCard

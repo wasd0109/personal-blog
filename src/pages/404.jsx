@@ -9,7 +9,7 @@ import { graphql } from "gatsby"
 
 const NotFoundPage = () => (
   <Layout showProfile={false}>
-    <Seo title="404: Not found" />
+    <Seo title="404 Not found" />
     <div className={styles.container}>
       <div className={styles.imageContainer}>
         <StaticImage
