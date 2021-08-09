@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 import * as styles from "./404.module.css"
+import { graphql } from "gatsby"
 
 const NotFoundPage = () => (
   <Layout showProfile={false}>
@@ -23,3 +24,17 @@ const NotFoundPage = () => (
 )
 
 export default NotFoundPage
+
+export const query = graphql`
+  query Locales($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`
