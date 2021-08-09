@@ -62,8 +62,16 @@
   text-decoration: underline;
 }
 
+.image {
+  height: 10rem;
+}
+
 @media (min-width: 961px) {
   .card {
     width: 100%;
+  }
+  .image {
+    height: 20rem;
+    width: auto;
   }
 }
