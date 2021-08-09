@@ -19,6 +19,7 @@ footer {
 .grvsc-container {
   width: 80vw;
 }
+
 @media (min-width: 961px) {
   .main {
     display: grid;
