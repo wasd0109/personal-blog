@@ -18,7 +18,7 @@
 
 /* Targeting image in markdown */
 p > img {
-  max-width: 80vw;
+  max-width: 100%;
 }
 h1 > kbd {
   font-size: medium;
