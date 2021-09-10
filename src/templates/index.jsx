@@ -1,5 +1,4 @@
 import * as React from "react"
-import { useEffect } from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -18,7 +17,7 @@ const IndexPage = ({ data, pageContext }) => {
       <Seo title={t("PageName")} />
       <div>
         {blogPosts.map(({ node: blogPost }) => (
-          <Link to={`/blogs/${blogPost.slug}`}>
+          <Link to={`blogs/${blogPost.slug}`}>
             <BlogCard
               key={blogPost.id}
               slug={blogPost.slug}
@@ -59,6 +58,7 @@ export const query = graphql`
             excerpt
             date
             hashtags
+            language
             thumbnail {
               childImageSharp {
                 gatsbyImageData

@@ -1,16 +1,16 @@
 import React from "react"
 import { Card, Container } from "react-bootstrap"
 
-import { Link, useI18next } from "gatsby-plugin-react-i18next"
+import { useI18next } from "gatsby-plugin-react-i18next"
 import Moment from "react-moment"
 
 import * as styles from "./BlogCard.module.css"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
 
 function BlogCard({ slug, title, excerpt, date, thumbnail, hashtags }) {
   const thumb = getImage(thumbnail)
   const { i18n, t } = useI18next("blogcard")
-  console.log(slug)
   return (
     <Container fluid>
       <Card className={styles.card}>
@@ -32,7 +32,7 @@ function BlogCard({ slug, title, excerpt, date, thumbnail, hashtags }) {
                 <p key={hashtag}>#{hashtag}</p>
               ))}
             </div>
-            <Link to={`/blogs/${slug}`}>{t("ReadMore")}</Link>
+            <Link to={`blogs/${slug}`}>{t("ReadMore")}</Link>
           </div>
         </Card.Body>
       </Card>
