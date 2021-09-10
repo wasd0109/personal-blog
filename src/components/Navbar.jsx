@@ -38,7 +38,7 @@ function NavBar({ siteTitle }) {
               language={languageChange}
             >
               <ImEarth />
-              {languageChange.toUpperCase()}
+              {t(languageChange)}
             </Link>
           </Nav.Item>
         </Nav>
