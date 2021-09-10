@@ -10,8 +10,14 @@ import useFirebaseAnalytics from "../utils/fbAnalytics"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "./blog-page.module.css"
+import {
+  FacebookShareButton,
+  TwitterIcon,
+  TwitterShareButton,
+} from "react-share"
+import { FacebookIcon } from "react-share"
 
-function BlogTemplate({ data }) {
+function BlogTemplate({ data, location }) {
   const {
     body,
     frontmatter: { title, excerpt, date, thumbnail, hashtags },
@@ -26,10 +32,15 @@ function BlogTemplate({ data }) {
         <Card className={styles.card}>
           <Card.Body className={styles.cardBody}>
             <h1>{title}</h1>
-            <p>
-              {t("PostTime")}:{" "}
+            <div className={styles.actionBar}>
               <Moment date={date} format="L" locale={i18n.language} />
-            </p>
+              <FacebookShareButton url={location.href}>
+                <FacebookIcon size={20} round={true} />
+              </FacebookShareButton>
+              <TwitterShareButton url={location.href}>
+                <TwitterIcon size={20} round={true} />
+              </TwitterShareButton>
+            </div>
             <GatsbyImage
               image={thumb}
               alt="blog thumbnail"
