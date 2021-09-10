@@ -12,6 +12,7 @@ const IndexPage = ({ data, pageContext }) => {
   useFirebaseAnalytics("visited_home_page")
   const { t } = useTranslation("home")
   const blogPosts = data.allMdx.edges
+
   return (
     <Layout showProfile={true}>
       <Seo title={t("PageName")} />

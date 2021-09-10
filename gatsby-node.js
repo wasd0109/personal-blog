@@ -36,7 +36,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     const language = node.frontmatter.language
     if (language === "en")
       createPage({
-        path: `enblogs/${node.slug}`,
+        path: `blogs/${node.slug}`,
         component: blogTemplate,
         context: {
           slug: node.slug,

@@ -10,6 +10,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 function BlogCard({ slug, title, excerpt, date, thumbnail, hashtags }) {
   const thumb = getImage(thumbnail)
   const { i18n, t } = useI18next("blogcard")
+  console.log(slug)
   return (
     <Container fluid>
       <Card className={styles.card}>
@@ -31,7 +32,7 @@ function BlogCard({ slug, title, excerpt, date, thumbnail, hashtags }) {
                 <p key={hashtag}>#{hashtag}</p>
               ))}
             </div>
-            <Link to={`blogs/${slug}`}>{t("ReadMore")}</Link>
+            <Link to={`/blogs/${slug}`}>{t("ReadMore")}</Link>
           </div>
         </Card.Body>
       </Card>
