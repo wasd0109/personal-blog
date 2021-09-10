@@ -1,7 +1,7 @@
 import React from "react"
 import * as styles from "./ProjectCard.module.css"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { Card, Container } from "react-bootstrap"
+import { Card } from "react-bootstrap"
 import { FaGithub } from "react-icons/fa"
 import { SiNetlify, SiFirebase } from "react-icons/si"
 

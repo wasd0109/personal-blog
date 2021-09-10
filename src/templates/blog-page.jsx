@@ -20,7 +20,7 @@ import { FacebookIcon } from "react-share"
 function BlogTemplate({ data, location }) {
   const {
     body,
-    frontmatter: { title, excerpt, date, thumbnail, hashtags },
+    frontmatter: { title, excerpt, date, thumbnail },
   } = data.mdx
   useFirebaseAnalytics(`visited_${title.replace(" ", "_")}_blog`)
   const thumb = getImage(thumbnail)
@@ -28,7 +28,7 @@ function BlogTemplate({ data, location }) {
   return (
     <Layout showProfile={true}>
       <Seo title={`${t("PageName")} | ${title}`} description={excerpt} />
-      <Container fluid className={styles.container}>
+      <Container fluid>
         <Card className={styles.card}>
           <Card.Body className={styles.cardBody}>
             <h1>{title}</h1>

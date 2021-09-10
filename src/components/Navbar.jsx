@@ -1,12 +1,11 @@
 import React from "react"
 import { Link, useI18next } from "gatsby-plugin-react-i18next"
-import { Navbar as BootstrapNavBar, Nav, Dropdown } from "react-bootstrap"
+import { Navbar as BootstrapNavBar, Nav } from "react-bootstrap"
 import * as styles from "./Navbar.module.css"
 import { ImEarth } from "react-icons/im"
-import { graphql, useStaticQuery } from "gatsby"
 
 function NavBar({ siteTitle }) {
-  const { languages, originalPath, t, i18n } = useI18next("navbar")
+  const { originalPath, t, i18n } = useI18next("navbar")
   const languageChange = i18n.language === "en" ? "jp" : "en"
   return (
     <BootstrapNavBar bg="bg-white" expand="lg" className={styles.nav}>

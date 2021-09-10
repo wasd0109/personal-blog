@@ -3,7 +3,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Card, Container } from "react-bootstrap"
 import { graphql } from "gatsby"
 import useFirebaseAnalytics from "../utils/fbAnalytics"
-import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa"
 import { IoMail } from "react-icons/io5"
 

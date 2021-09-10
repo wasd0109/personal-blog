@@ -1,8 +1,6 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import { Container } from "react-bootstrap"
-
 import "./destyle.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./layout.css"
