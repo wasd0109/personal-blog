@@ -23,7 +23,9 @@ function ProjectCard({
 
   return (
     <Card className={styles.card}>
-      <GatsbyImage image={thumb} alt={`${name} thumbnail`} />
+      <div className={styles.imageContainer}>
+        <GatsbyImage image={thumb} alt={`${name} thumbnail`} />
+      </div>
       <Card.Body className={styles.cardBody}>
         <Card.Title className={styles.name}>{name}</Card.Title>
         <div className={styles.stacks}>
@@ -33,7 +35,12 @@ function ProjectCard({
         </div>
         <Card.Text className={styles.description}>{description}</Card.Text>
         <div className={styles.bottomRow}>
-          {linkToRepo === "NULL" ? null : (
+          {linkToRepo === "NULL" ? (
+            <a className={styles.disabledButton}>
+              <FaGithub />
+              Not avaliable
+            </a>
+          ) : (
             <a href={linkToRepo} target="_blank" rel="noreferrer">
               <FaGithub />
               Github
