@@ -33,14 +33,18 @@ function ProjectCard({
         </div>
         <Card.Text className={styles.description}>{description}</Card.Text>
         <div className={styles.bottomRow}>
-          <a href={linkToRepo} target="_blank" rel="noreferrer">
-            <FaGithub />
-            Github
-          </a>
-          <a href={linkToDeploy} target="_blank" rel="noreferrer">
-            {deployLogo}
-            {deploymentLocation}
-          </a>
+          {linkToRepo === "NULL" ? null : (
+            <a href={linkToRepo} target="_blank" rel="noreferrer">
+              <FaGithub />
+              Github
+            </a>
+          )}
+          {linkToDeploy === "NULL" ? null : (
+            <a href={linkToDeploy} target="_blank" rel="noreferrer">
+              {deployLogo}
+              {deploymentLocation}
+            </a>
+          )}
         </div>
       </Card.Body>
     </Card>
